@@ -1,0 +1,13 @@
+#
+# Defined your commands in systemChecksy
+#
+systemChecks:
+        # PHP checks
+        PHP:
+                Checking PHP version: php -v
+                Checking enabled PHP extensions: php -m
+                Checking Composer version: composer --version
+        # Apache checks
+        Apache:
+                Checking Apache version: httpd -v
+                Checking loaded Apache modules: httpd -M
