@@ -10,23 +10,28 @@ Python 3 script for system checks
     $ pip install PyYAML
     ```
 
-## Installation
+## Usage
 
-Create configuration file:
+1. Download package with wget or curl
 
-```bash
-$ mv config.yml.dist config.yml
-```
+    ```bash
+    $ wget https://github.com/hirnsturm/py-system-check/archive/master.zip -O py-system-check.zip
+    ```  
+    
+    ```bash
+    $ curl https://github.com/hirnsturm/py-system-check/archive/master.zip -o py-system-check.zip
+    ```  
 
-## Configuration
+2. Create configuration file
 
-You can configure your commands in `config.yml` file.
+    ```bash
+    $ mv config.yml.dist config.yml
+    ```
 
-## Execution
+3. Create your check commands in `config.yml` file.
 
-* Install script on target system
-* Run check
+3. Run your checks
 
-```bash
-$ python3 check.py
-```
+    ```bash
+    $ python3 check.py
+    ```
