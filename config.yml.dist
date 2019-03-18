@@ -2,12 +2,20 @@
 # Defined your commands in systemChecksy
 #
 systemChecks:
-        # PHP checks
-        PHP:
-                Checking PHP version: php -v
-                Checking enabled PHP extensions: php -m
-                Checking Composer version: composer --version
-        # Apache checks
-        Apache:
-                Checking Apache version: httpd -v
-                Checking loaded Apache modules: httpd -M
+    # PHP checks
+    User:
+        Checking user groups: groups
+    PHP:
+        Checking PHP version: php -v
+        Checking enabled PHP extensions: php -m
+        Checking Composer version: composer --version
+    # Apache checks
+    Apache:
+        Checking Apache version: apache2ctl -M
+        Checking loaded Apache modules: apache2ctl -M
+    # Image tools
+    Image Tools:
+        Checking whether ImageMagick is installed: convert -version
+        Checking whether ImageMagick extension for PHP is installed: php -m | grep imagick
+        Checking whether GraphicsMagick is installed: gm
+        Checking whether GraphicsMagick extension for PHP is installed: php -m | grep gd
